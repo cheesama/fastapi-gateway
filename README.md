@@ -1,6 +1,14 @@
 # fastapi-gateway
 
 ```mermaid
+  graph TD;
+      A[config.json]-->B[parser]
+      B-->|check route parts|C[generated route endpoints]
+      B-->|checkt backend parts|D[generated backend endpoints]
+     
+```
+
+```mermaid
   graph LR;
       A[user request]-->B(route endpoint 1);
       A-->C(route endpoint 2);
