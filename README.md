@@ -43,3 +43,6 @@
       E-->|deliver reseponse after header / body json-patch operation|I([backend endpoint 3]);
       I-->|return merge & transformation response|C
 ```
+
+## to-do
+- check https://github.com/comeuplater/fastapi_cache for response caching
