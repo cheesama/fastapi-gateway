@@ -1,5 +1,28 @@
 # fastapi-gateway
 
+## config.json format
+
+```json
+{
+  "port" : 80,
+  "routes" : [
+    "route" : "/",
+    "backends": [
+      {
+        "url": "http://some-landing",
+        "method": "GET",
+        "header_json_patch" : [
+          { "op": "add", "path": "/biscuits/1", "value": { "name": "Ginger Nut" } }
+        ],
+        "body_json_patch": [
+          { "op": "test", "path": "/best_biscuit/name", "value": "Choco Leibniz" }
+        ]
+      }
+    ]
+  ]
+}
+```
+
 ```mermaid
   graph TD;
       A[config.json]-->B[parser]
