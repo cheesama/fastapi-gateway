@@ -1,0 +1,25 @@
+{
+    "port" : 80,
+    "routes" : [
+        {
+            "route" : "/test1",
+            "method": "GET",
+            "backends": [
+                {
+                    "url": "http://localhost:1337/api/services",
+                    "method": "GET"
+                }
+            ]
+        },
+        {
+            "route" : "/test2",
+            "method": "GET",
+            "backends": [
+                {
+                    "url": "http://localhost:1337/api/products",
+                    "method": "GET"
+                }
+            ]
+        }
+    ]
+}
