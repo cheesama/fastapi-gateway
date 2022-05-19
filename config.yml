@@ -1,0 +1,14 @@
+port: 80
+routes:
+  - route: "/test1/{param_1}"
+    method: "GET"
+    backends:
+    - host: "http://localhost:1337" 
+      url: "/api/services"
+      method: "GET"
+  - route: "/test2"
+    method: "GET"
+    backends:
+    - host: "http://localhost:1337" 
+      url: "/api/products"
+      method: "GET"

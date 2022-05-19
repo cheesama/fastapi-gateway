@@ -2,3 +2,5 @@ uvicorn
 fastapi
 aiohttp
 jsonpatch
+pyyaml
+jinja2
