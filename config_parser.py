@@ -12,4 +12,8 @@ with open("config.yml", 'r') as stream:
 # Load templates file from templtes folder 
 env = Environment(loader = FileSystemLoader('./templates'),   trim_blocks=False, lstrip_blocks=True)
 template = env.get_template('main_template.py')
-print(template.render(config_data))
+
+with open('main.py', 'w') as mainFile:
+    print(template.render(config_data))
+    mainFile.write(template.render(config_data))
+

@@ -1,6 +1,6 @@
 port: 80
 routes:
-  - route: "/test1/{param_1}"
+  - route: "/test1/{param_1}/{param_2}"
     method: "GET"
     backends:
     - host: "http://localhost:1337" 
