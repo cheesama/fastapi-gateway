@@ -6,6 +6,9 @@ routes:
     - host: "http://localhost:1337" 
       url: "/api/services"
       method: "GET"
+    - host: "http://localhost:1337" 
+      url: "/api/products"
+      method: "GET"
   - route: "/test2"
     method: "GET"
     backends:
